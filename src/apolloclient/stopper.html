@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <p id = 'getTime'></p>
+    <button onclick="stop()">stop</button>
+    <script>
+        function myTimer() {
+  const date = new Date();
+  document.getElementById("getTime").innerHTML = date.toLocaleTimeString();
+}
+let interval;
+const start = () =>{
+ interval = setInterval(myTimer,1000);
+}
+const stop = () =>{
+    clearInterval(interval)
+}
+    </script>
+</body>
+</html>
